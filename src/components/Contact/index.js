@@ -88,6 +88,16 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        <div className="info-map">
+          Slobodan Gajić,
+          <br />
+          Serbia,
+          <br />
+          Branka RadiČevića 19, 22000 <br />
+          Sremska Mitrovica <br />
+          <br />
+          <span>freelancerslobodan@gmail.com</span>
+        </div>
       </div>
       <Loader type="pacman" />
     </>
