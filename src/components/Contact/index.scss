@@ -111,3 +111,35 @@
     color: #ffd700;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .contact-form {
+    ul {
+      li {
+        &.half {
+          float: none;
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+
+    .flat-button {
+      float: none;
+      margin-top: 10px;
+      font-size: 18px;
+      padding: 10px 15px;
+    }
+  }
+
+  .map-wrap {
+    float: none;
+    width: 100%;
+    height: 400px;
+    margin: 0;
+  }
+
+  .info-map {
+    display: none;
+  }
+}
