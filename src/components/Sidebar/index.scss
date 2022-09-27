@@ -127,7 +127,8 @@
   }
 }
 
-.hamburger-icon {
+.hamburger-icon,
+.close-icon {
   display: none;
 }
 
@@ -174,7 +175,8 @@
       }
     }
 
-    .hamburger-icon {
+    .hamburger-icon,
+    .close-icon {
       display: block;
       position: absolute;
       top: 18px;
