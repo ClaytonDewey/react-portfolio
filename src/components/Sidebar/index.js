@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './index.scss'
 import LogoS from '../../assets/images/logo-s.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
@@ -19,13 +20,15 @@ import {
 import { Link, NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
+  const [showNav, setShowNav] = useState(false)
+
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
         <img src={LogoS} alt="logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="slobodon" />
       </Link>
-      <nav>
+      <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink exact="true" activeclassname="active" to="/">
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
@@ -56,6 +59,14 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
+
+        <FontAwesomeIcon
+          icon={faClose}
+          color="#ffd700"
+          size="3x"
+          className="close-icon"
+          onClick={() => setShowNav(false)}
+        />
       </nav>
       <ul>
         <li>
@@ -107,17 +118,15 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
-      {/* <FontAwesomeIcon
+      <FontAwesomeIcon
         onClick={() => setShowNav(true)}
         icon={faBars}
         color="#ffd700"
         size="3x"
         className="hamburger-icon"
-      /> */}
+      />
     </div>
   )
 }
 
 export default Sidebar
-// https://www.youtube.com/watch?v=bmpI252DmiI 20:39
-// https://github.com/bobangajicsm/react-portfolio-website/blob/master/src/components/Sidebar/index.js
